@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "929068591995",
+    "project_id": "estado-unicda",
+    "storage_bucket": "estado-unicda.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929068591995:android:5b77d8227aee9a66e5abde",
+        "android_client_info": {
+          "package_name": "com.example.estadounicda20"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD175ho404BtwTGvD9lRUVQJgPwiRuF7EE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
