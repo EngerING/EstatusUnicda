@@ -1,3 +1,5 @@
+package com.example.estadounicda20.ui
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -6,7 +8,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.Comment
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Task
 import androidx.compose.material.icons.filled.ThumbUp
@@ -14,7 +15,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -103,12 +103,7 @@ fun HomeScreen(
         )
 
         Spacer(modifier = Modifier.weight(1f))
-
-        // Barra de navegación inferior
-        BottomNavigationBar(
-            colorPrimary = colorPrimary,
-            onLogout = onLogout
-        )
+        // ***NO pongas aquí el BottomNavigationBar***
     }
 }
 
@@ -154,37 +149,5 @@ fun FeatureCard(
                 Text(desc, fontSize = 13.sp, color = Color.Gray)
             }
         }
-    }
-}
-
-@Composable
-fun BottomNavigationBar(
-    colorPrimary: Color,
-    onLogout: () -> Unit = {}
-) {
-    NavigationBar(
-        containerColor = Color.White,
-        tonalElevation = 8.dp
-    ) {
-        NavigationBarItem(
-            selected = true,
-            onClick = {},
-            icon = { Icon(Icons.Default.Home, contentDescription = "Home", tint = colorPrimary) }
-        )
-        NavigationBarItem(
-            selected = false,
-            onClick = {},
-            icon = { Icon(Icons.Default.ThumbUp, contentDescription = "Votación", tint = colorPrimary) }
-        )
-        NavigationBarItem(
-            selected = false,
-            onClick = {},
-            icon = { Icon(Icons.Default.Comment, contentDescription = "Comentarios", tint = colorPrimary) }
-        )
-        NavigationBarItem(
-            selected = false,
-            onClick = onLogout,
-            icon = { Icon(Icons.Default.Person, contentDescription = "Perfil", tint = colorPrimary) }
-        )
     }
 }
